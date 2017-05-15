@@ -15,6 +15,10 @@ export default class Dragon {
     return this.health;
   }
   
+  setHealth(health) {
+    this.health = health;
+  }
+  
    getDamage() {
     return this.damage;
   }
