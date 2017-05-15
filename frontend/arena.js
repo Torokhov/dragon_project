@@ -1,11 +1,15 @@
 'use strict'
 
 export default class Arena {
-  baff(func, n, health) {
-    return health + func(n);
+  constructor(n) {
+   this.n = n; 
   }
   
-  debaff(func, n, health) {
-    return health - func(n);
+  baff(func, health) {
+    return health + func(this.n);
+  }
+  
+  debaff(func, health) {
+    return health - func(this.n);
   }
 }

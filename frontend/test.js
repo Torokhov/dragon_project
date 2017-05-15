@@ -2,6 +2,7 @@
 
 import Dragon from "./dragon.js";
 import Arena from "./arena.js";
+import Game from "./game.js"
 
 describe('Game', () => {
   it('Создаем драконов', () => {
@@ -16,8 +17,19 @@ describe('Game', () => {
   });
   
   it('Создаем арену', () => {
-    const arena = new Arena();
-    assert.equal(arena.baff((n) => n, 10, 100), 110);
-    assert.equal(arena.debaff((n) => n * 0.1, 150, 100), 85);
+    const arena = new Arena(10);
+    assert.equal(arena.baff((n) => n, 100), 110);
+    assert.equal(arena.debaff((n) => n * 0.1, 100), 99);
+  });
+  
+  it('Игра', () => {
+    const dragon1 = new Dragon('Фафнир', 100, 25);
+    const dragon2 = new Dragon('Смауг', 100, 20);
+     const arena = new Arena(10);
+    
+    const game = new Game();
+    game.start();
+    const log = game.getLog();
+    assert.equal(log.length, 5);
   });
 });
