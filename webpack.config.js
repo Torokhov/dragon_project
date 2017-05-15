@@ -4,14 +4,15 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 
 module.exports = {
-  context: __dirname + '/js',
+  context: __dirname + "/frontend",
   
   entry: {
-    dragon: "./dragon",
-    game: "./game"
+//    dragon: "./dragon",
+//    game: "./game",
+    test: "./test"
   },
     output: {
-      path: __dirname +  "/js",
+      path: __dirname +  "/public",
       filename: "[name].js",
       library: "[name]"
     },
