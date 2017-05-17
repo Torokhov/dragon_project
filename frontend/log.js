@@ -15,7 +15,15 @@ export default class Log {
     this.list.length = 0;
   }
   
+  getRecord(num) {
+    return this.list[num-1];
+  }
+  
+  getLength() {
+    return this.list.length;
+  }
+  
   toString() {
-    
+    return this.list;
   }
 }
