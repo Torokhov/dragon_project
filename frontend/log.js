@@ -24,6 +24,8 @@ export default class Log {
   }
   
   toString() {
-    return this.list;
+    return this.list.reduce((str, value) => {
+      return str += `${value}\n`;
+    }, '');
   }
 }

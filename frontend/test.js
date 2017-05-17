@@ -38,5 +38,6 @@ describe('Game', () => {
     const log = game.getLog();
     assert.equal(log.getLength(), 11);
     assert.equal(log.getRecord(11), 'Дракон Фафнир победил');
+    console.log(log.toString());
   });
 });
