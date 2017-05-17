@@ -36,6 +36,7 @@ describe('Game', () => {
     const game = new Game(arena, dragon1, dragon2);
     game.start();
     const log = game.getLog();
-    assert.equal(log.length, 11);
+    assert.equal(log.getLength(), 11);
+    assert.equal(log.getRecord(11), 'Дракон Фафнир победил');
   });
 });
