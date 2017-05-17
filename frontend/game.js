@@ -16,7 +16,7 @@ export default class Game {
         log.add(`Дракон ${dragon2.getName()} победил`);
         return log;
       } else if (dragon2.getHealth() <= 0) {
-        log.add(`Дракон ${dragon2.getName()} победил`);
+        log.add(`Дракон ${dragon1.getName()} победил`);
         return log;
       }
       
@@ -49,6 +49,6 @@ export default class Game {
   }
   
   getLog() {
-    return this.log.getList();
+    return this.log;
   }
 }
